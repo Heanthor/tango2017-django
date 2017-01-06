@@ -11,21 +11,27 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import json
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
+with open("config.json", 'r') as f:
+    config_file = json.loads(f.read().strip())
+    # Quick-start development settings - unsuitable for production
+    # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'pscekc^gcg2@9vni@u#w=x1gugws_u(jrw_5l(y^on=e)p!plc'
+    # SECURITY WARNING: keep the secret key used in production secret!
+    SECRET_KEY = config_file["secretKey"]
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+    # SECURITY WARNING: don't run with debug turned on in production!
+    DEBUG = config_file["debug"]
 
-ALLOWED_HOSTS = []
+if not DEBUG:
+    ALLOWED_HOSTS = [".terrapintango.com"]
+else:
+    ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -107,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'US/Eastern'
 
 USE_I18N = True
 
