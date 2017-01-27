@@ -18,38 +18,13 @@ class Person(models.Model):
         return "Person [%s %s (%s)]" % (self.firstname, self.lastname, self.email)
 
 
-class Application(models.Model):
-    """
-    An Application contains all the information needed to sign up for the festival.
-    """
-    GENERAL_ADMISSION = "GEN"
-    STUDENT_ADMISSION = "STD"
-
-    TICKET_TYPE = (
-        (GENERAL_ADMISSION, "General Admission"),
-        (STUDENT_ADMISSION, "Student Admission")
-    )
-
-    # People on the application
-    # (partner is not required)
-    main_applicant = models.ForeignKey(Person)
-    partner = models.ForeignKey(Person, blank=True)
-
-    ticket_type = models.CharField(max_length=3, choices=TICKET_TYPE, default=GENERAL_ADMISSION)
-
-    timestamp = models.DateTimeField(default=timezone.now)
-
-    # can be null before classes are entered
-    classes = models.ManyToManyField(Class, blank=True)
-
-
-class Class(models.Model):
+class TangoClass(models.Model):
     """
     A Class represents a tango class, that can be signed up for by dancers.
     The price will be modified by ticket type
     """
     title = models.CharField(max_length=30)
-    price = models.DecimalField(max_length=5, max_digits=2)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
         return "Class[%s @ $%f]" % (self.title, float(self.price))
@@ -89,5 +64,32 @@ class PaymentStatus(models.Model):
         (VOIDED, "This authorization has been voided.")
     )
 
-    total = models.DecimalField(max_length=10, max_digits=2)
+    total = models.DecimalField(max_digits=10, decimal_places=2)
     payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS, blank=True)
+    transaction_id = models.CharField(max_length=50)
+    transaction_email = models.EmailField(max_length=100)
+
+
+class Application(models.Model):
+    """
+    An Application contains all the information needed to sign up for the festival.
+    """
+    GENERAL_ADMISSION = "GEN"
+    STUDENT_ADMISSION = "STD"
+
+    TICKET_TYPE = (
+        (GENERAL_ADMISSION, "General Admission"),
+        (STUDENT_ADMISSION, "Student Admission")
+    )
+
+    # People on the application
+    # (partner is not required)
+    main_applicant = models.ForeignKey(Person, related_name="main_applicant")
+    partner = models.ForeignKey(Person, blank=True, related_name="partner")
+
+    ticket_type = models.CharField(max_length=3, choices=TICKET_TYPE, default=GENERAL_ADMISSION)
+
+    timestamp = models.DateTimeField(default=timezone.now)
+
+    # can be null before classes are entered
+    classes = models.ManyToManyField(TangoClass, blank=True)
