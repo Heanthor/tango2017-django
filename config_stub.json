@@ -1,0 +1,9 @@
+{
+  "secretKey": "",
+  "debug": true,
+  "databaseInfo": {
+    "name": "",
+    "host": "",
+    "port": ""
+  }
+}

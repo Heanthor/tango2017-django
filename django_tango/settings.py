@@ -28,6 +28,8 @@ with open("config.json", 'r') as f:
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = config_file["debug"]
 
+    database_info = config_file["databaseInfo"]
+
 if not DEBUG:
     ALLOWED_HOSTS = [".terrapintango.com"]
 else:
@@ -85,9 +87,9 @@ WSGI_APPLICATION = 'django_tango.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tango',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'NAME': database_info["name"],
+        'HOST': database_info["host"],
+        'PORT': database_info["port"],
     }
 }
 
