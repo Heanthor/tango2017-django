@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : WellFormed
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130731
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <title>7th annual Terrapin Tango Festival</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Argentine Tango, University of Maryland, ATC, Terrapin Tango Festival" />
+    <meta name="description" content="Terrapin Tango Festival" />
+    <meta name="author" content="Benjamyn Ward" />
+    <!--*******************************-->
+    <!-- LOAD FACEBOOK SCRIPT -->
+    <meta property="og:title" content="Terrapin Tango Festival" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.studentorg.umd.edu/atc/site/festival/" />
+    <meta property="og:image" content="http://www.studentorg.umd.edu/atc/site/festival/tango/TangoCoupleSmall.jpg" />
+    <meta property="og:site_name" content="Terrapin Tango Festival" />
+    <script type="text/javascript" src="scripts/facebook.js"></script>
+    <!--*******************************-->
+    <!-- LOAD GOOGLE PLUS SCRIPT -->
+    <script type="text/javascript" src="scripts/googlePlus.js"></script>
+    <!--*******************************-->
+    <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link href="stylesheets/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="stylesheets/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="stylesheets/artists-tab-slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="logo" class="container">
+    <h1><a href="#">7th annual <span>Terrapin Tango Festival</span></a></h1>
+    <p>The University of Maryland, College Park, April 15-17, 2016</p>
+</div>
+<div id="menu" class="container">
+    <ul>
+        <li><a href="index.html">Home</a></li>       
+        <li><a href="artists.html">Artists</a></li>
+        <li class="current_page_item"><a href="#">Yoga/Vendors</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="directions.html">Directions</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+</div>
+<div id="page" class="container">
+    <div>
+        <!-- it works the same with all jquery version from 1.3.1 to 2.0.3 -->
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+        <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+        <script type="text/javascript" src="js/jssor.core.js"></script>
+        <script type="text/javascript" src="js/jssor.utils.js"></script>
+        <script type="text/javascript" src="js/jssor.slider.js"></script>
+        <script type="text/javascript" src="js/jssor.player.ytiframe.js"></script>
+        <script>
+
+            jQuery(document).ready(function ($) {
+                var options = {
+                    $AutoPlay: false,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                    $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                    $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                    $PauseOnHover: 0,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 3
+
+                    $ArrowKeyNavigation: true,                           //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                    $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                    $MinDragOffsetToSlide: 150,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                    //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                    //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                    $SlideSpacing: 5,                                     //[Optional] Space between each slide in pixels, default value is 0
+                    $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                    $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                    $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, direction navigator container, thumbnail navigator container etc).
+                    $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, default value is 1
+                    $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                    $ThumbnailNavigatorOptions: {
+                        $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                        $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                        $AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+                        $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+                        $SpacingX: 4,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                        $SpacingY: 4,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+                        $DisplayPieces: 6,                              //[Optional] Number of pieces to display, default value is 1
+                        $ParkingPosition: 0,                            //[Optional] The offset position to park thumbnail
+                        $Orientation: 1,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+                        $DisableDrag: false                             //[Optional] Disable drag or not, default value is false
+                    }
+                };
+
+                var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+                //fetch and initialize youtube players
+                $JssorPlayer$.$FetchPlayers(document.body);
+            });
+        </script>
+        <!-- Jssor Slider Begin -->
+        <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
+        <div id="slider1_container" style="position: relative; top: 0px; bottom: 0px; left: 0px; width: 810px;
+            height: 850px; background: rgba(0,0,0,0)" >
+
+            <!-- Loading Screen -->
+            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                    background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+                <div style="position: absolute; display: block; background: url(./images/loading.gif) no-repeat center center;
+                    top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+            </div>
+
+            <!-- Slides Container -->
+            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 30px; width: 1200px; height: 850px; overflow: hidden;">
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">Adorno by Holly</p></div>
+                    <img class="slide-image image-margin" src="./images/vendors/adorno.jpg" width="450"/>
+                    <p>
+                       <br>
+                        Adorno is jewelry created for tango dancing--light, shimmering pieces that reflect the elegance and glamour of the milonga. 
+                    </p>
+                    <p>
+                        Each creation is a hand crafted study in form and color, using semiprecious gemstones, Sterling Silver, and 14K Gold Fill as the palate.  Signature necklace clasps feature dangling gemstone features to accentuate your back.  Check out <a href="https://www.etsy.com/shop/adornobyholly" target="_blank"> Adorno</a> to view a sample of pieces, and come see the newest work in person at the Terrapin Tango Festival this year! 
+                    </p>
+                </div>
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">La Mina</p></div>
+                                        <img class="slide-image image-margin" src="./images/vendors/la_mina.jpg" height="" width="170" />
+                    <p>
+                        <br>
+                       La Mina Tango Boutique's mission is to bring the best quality Tango shoes, clothing and accessories for men and women from around the world!
+                    </p>
+                    <p>
+                        We bring you the vintage flare, the ultimate comfort, and of course the perfectly balanced shoes to accommodate all needs and tastes!
+                    </p>    
+                    <p>
+                        With ladies heals from 5.5 cm to 9 cm, countless color combinations, and sizes from 4 to 11 as well as mens shoes from size 38 to size 47, and 10 of Buenos Aires hottest tango clothing designers including Roxana Vincelli, Tango Imagen, Mimi Pinzon and many others there will be tons to choose from!
+                    </p>
+                </div>
+<!--
+                  <div>
+                    <div u="thumb"><p style="vertical-align: middle;">Eurydice Design</p></div>
+                                        <img class="slide-image image-margin" src="./images/vendors/helen.jpg" height="380" width="" />
+                      <p>
+                        <br>
+                      Helen has been sewing since her freshman year in high school after finding a vintage Dressmaker machine in her attic, but it was tango that made her become serious about the craft.
+                      </p>
+                      <p>
+                          She works at the Clarice Smith Performing Arts Center making costumes for theater, dance, and opera performances and brings the precision and whimsy to her tango creations. 
+                      </p>
+                      <p>
+                          Helen has been a member since her freshman year and we are proud to showcase her work.
+                      </p>
+                      <p>
+                          Please also check out her Etsy shop, <a href="http://www.etsy.com/shop/EurydiceDesign" target="_blank"> Eurydice Design </a>! 
+                      </p>
+                </div> 
+-->
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">Viviana Tango</p></div>
+                     <img class="slide-image image-margin" src="./images/vendors/vivianaTangoShoe.jpg" height="380" width="" />
+                    <p>
+                        <br>
+                        Viviana tango shoes for men are hand made in Argentina, one pair at a time, from excelent leather, and with exceptional style.
+                    </p>
+                    <p>
+                        Call or email Viviana for more information at 301- 775-6014 or <a href="mailto:Vivitango26@gmail.com"> Vivitango26@gmail.com </a>
+                    </p>
+                </div>   
+                  <div>
+                    <div u="thumb"><p style="vertical-align: middle;">Yoga para Tango</p></div>
+                     <img class="slide-image image-margin" src="./images/yoga/YogaParaTango.jpg" height="" width="390" />
+                     <p>
+                        <br>
+                       Yoga para Tango:
+                    <br>
+                        Some think of dance as a moving meditation, a chance to connect, let go, find balance and be present in the moment. Like yoga, dancing can be a chance to find balance in our bodies.
+                   <br>
+Yoga para Tango classes combine a therapeutic approach to traditional yoga movements, woven together with the movement (and yes music) of Argentine tango. We’ll explore the balance of strength and flexibility needed in the body during and after the leaving dance floor with particular emphasis on core strength, twisting and balance. Gain more freedom in your body and your dance. Your feet, knees, and hips will thank you later. No tango heels required.
+                   <br><br>
+                        </p>
+                <p>
+                    
+                    About the Instructor:
+                    <br>
+                    Cassandra began as a ballet dancer studying at the Washington School of Ballet, Boston Ballet and Joffrey Ballet School until the age of 18, later studying theater, acting and playwriting in NY. She began dancing Argentine Tango in 2006 and has been hooked ever since. Traveling each year to Buenos Aires, Argentina. Cassandra has been practicing yoga since 2001. Her training includes: OFSY’s 200-Hour Hatha-Vinyasa Teacher Training, Aerial Yoga Teacher Training Program (Om Factory), and Mother Mary’s Restorative Training (Level 1).
+                   <br>
+                    Cassandra is thrilled to have the opportunity to combine her two passions of dancing tango &amp; practicing yoga. Her yoga classes (including Vinyasa, Restorative &amp; Aerial Yoga) work to find balance, awareness and ease in the body through proper alignment. She continues to study ways to work with dancers in healthy, injury-preventing ways. Cassandra recently taught, Yoga for Dancers classes at the Baltimore Tango Festival.
+                    </p>
+                </div> 
+            </div>
+
+            <!-- ThumbnailNavigator Skin Begin -->
+            <div u="thumbnavigator" class="jssort14" style="position: absolute; width: 1000px; height: 47px; left:100px; top: -27px; background: rgba(0,0,0,0);">
+                <div u="slides" style="cursor: move; top:0px; left:0px;">
+                    <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 180px; HEIGHT: 40px; TOP: 0; LEFT: 0; padding:0px; background:#fff;">
+                        <div class=w><ThumbnailTemplate class="c" style="WIDTH: 100%; HEIGHT: 35px; position:absolute; TOP: 0; LEFT: 0; line-height:23px; text-align:center;"></ThumbnailTemplate></div>
+                    </div>
+                </div>
+            </div>
+            <!-- ThumbnailNavigator Skin End -->
+        </div>
+    </div>
+</div>
+<div id="copyright" class="container">
+    <p>Copyright (c) 2006-2015 Argentine Tango Club. All rights reserved. | Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
+</div>
+</body>
+</html>

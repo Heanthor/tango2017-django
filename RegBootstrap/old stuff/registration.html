@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : WellFormed
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130731
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <title>7th annual Terrapin Tango Festival</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Argentine Tango, University of Maryland, ATC, Terrapin Tango Festival" />
+    <meta name="description" content="Terrapin Tango Festival" />
+    <meta name="author" content="Benjamyn Ward" />
+    <!--*******************************-->
+    <!-- LOAD FACEBOOK SCRIPT -->
+    <meta property="og:title" content="Terrapin Tango Festival" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.studentorg.umd.edu/atc/site/festival/" />
+    <meta property="og:image" content="http://www.studentorg.umd.edu/atc/site/festival/tango/TangoCoupleSmall.jpg" />
+    <meta property="og:site_name" content="Terrapin Tango Festival" />
+    <script type="text/javascript" src="scripts/facebook.js"></script>
+    <!--*******************************-->
+    <!-- LOAD GOOGLE PLUS SCRIPT -->
+    <script type="text/javascript" src="scripts/googlePlus.js"></script>
+    <!--*******************************-->
+    <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link href="stylesheets/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="stylesheets/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="stylesheets/artists-tab-slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="logo" class="container">
+    <h1><a href="#">7th annual <span>Terrapin Tango Festival</span></a></h1>
+    <p>The University of Maryland, College Park, April 15-17, 2016</p>
+</div>
+    <div></div>
+    <div class="bottom_divider">
+    </div>
+
+<div id="page" class="container">
+    <div style="text-align: center;">
+                    <br>
+
+</head>
+
+<body>
+<form action="submit_registration.php" method="post">
+    <p>
+    <table cellspacing="10">
+    <tr> <td><strong>* First Name</strong><br /><input type="text" name="fname" id="fname" size="30" required></td>
+    <td><strong>* Last Name</strong><br /><input type="text" name="lname" id="lname" size="30" required></td> </tr>
+    <tr> <td> <strong>* Email</strong><br /><input type="email" name="email" id="email" size="30" required></td>
+    <td><strong>* Phone</strong><br /><input type="text" name="phone" id="phone" size="30" required></td></tr>
+    </table>
+    </p>
+    <p>
+    <table cellspacing="60" >
+    <tr><td style="vertical-align:top">
+    <strong>* Ticket Type</strong><br><br>
+    <select name="status" required>
+        <option value="general">General Admission</option>
+        <option value="student">Student</option>
+      </select>
+
+        <!--
+    <input type='radio' name='status' id='umdstudent' value='UMD Student'><label for='umdstudent'> UMD Student</label><br /><br />
+    <input type='radio' name='status' id ='nonumdstudent' value='General Student'><label for='nonumdstudent'>   Non-UMD Student</label><br /><br />
+    <input type='radio' name='status' id='general' value='General Admission'><label for='general'>   General Admission</label> -->
+    </td>
+    <td style="vertical-align:top">
+
+    <strong>* Dancer Type</strong><br><br>
+        <select name="dancer" id='firstselect' onchange='firstSelect();' required>
+            <option value ="LEADER">Leader</option>
+            <option value ="FOLLOWER">Follower</option>
+        </select>
+
+
+    <!-- <input type='radio' name='dancer' id='leader' value='leader'><label for='leader'>Leader</label><br /><br />
+    <input type='radio' name='dancer' id='follower' value='follower'><label for='follower'>Follower</label> -->
+
+    </td>
+
+    <td style="vertical-align:top">
+    </select>
+    </td></tr>
+    </table>
+    </p>
+    <p>
+    <strong>* Registering as partners? Note: Partners must sign up for the same schedule.
+    No additional discounts granted for students.</strong><br />
+
+
+        <input type='radio' name='partner' value='1' id='1' checked='checked'><label for='1'>&nbsp;&nbsp;&nbsp;I am registering alone</label><br /><br />
+    <input type='radio' name='partner' value='2' id='2'><label for='2'>&nbsp;&nbsp;&nbsp;I am registering with a partner</label>
+    <div id="extraForm" style='background-color: #282828' hidden>
+    <strong>Please enter the information for the second registrant.</strong><br />
+    <table cellspacing="10">
+    <tr> <td><strong>* First Name</strong><br /><input type="text" name="fname2" id="fname2" size="30"></td>
+    <td><strong>* Last Name</strong><br /><input type="text" name="lname2" id="lname2" size="30"></td> </tr>
+    <tr> <td><strong>* Dancer Type</strong><br><br>
+        <select name="partnerdancer" id='secondselect' disabled='disabled'>
+            <option value ="FOLLOWER">Follower</option>
+            <option value ="LEADER">Leader</option>
+        </select>
+        <input type='text' name='partnerdancerh' id='partnerdancerh' value='Follower' hidden='hidden'>
+        </td>
+    </tr>
+    </table>
+    </div>
+    </p>
+    <p>
+    <strong> * I have read and agree to abide by the <a href='http://www.studentorg.umd.edu/atc/site/festival/register/refund.html'>refund policy and terms and conditions. </a> </strong><br />
+    <input type='checkbox' name='confirm' id='confirm' required>&nbsp;&nbsp;<label for='confirm'>Confirm</label>
+    </p>
+    <br /><br />
+    * Indicates Response Required
+    <br /><br /><input type='submit' name='submit' value="Continue?">
+</form>
+</body>
+</html>
+<script>
+window.onsubmit = function() {
+    var alertString = "";
+
+    // check phone number
+    var phoneText = document.getElementById("phone").value;
+    // strip non numeric characters
+    phoneText = phoneText.replace(/\D/g, '');
+
+    // 1xxx xxx xxxx or 1 xxx xxx xxxx
+    if (phoneText.length != 10 &&
+        !(phoneText.length == 11 && phoneText[0] == "1")) {
+            alertString += "Please enter a valid phone number (xxx xxx xxxx or 1 xxx xxx xxxx).";
+        }
+
+    // partner check
+    if (document.getElementById("2").checked) {
+        if (document.getElementById("fname2").value.length == 0) {
+            alertString += "Please enter your partner's first name.\n";
+        }
+
+        if (document.getElementById("lname2").value.length == 0) {
+            alertString += "Please enter your partner's last name.\n";
+        }
+    }
+
+    if (alertString.length > 0) {
+        alert(alertString);
+
+        return false;
+    } else {
+        return true;
+    }
+}
+    var alone = document.getElementById("1");
+    var partner = document.getElementById("2");
+    var form = document.getElementById("extraForm");
+    var select1 = document.getElementById("firstselect");
+    var select2 = document.getElementById("secondselect");
+    var hidden = document.getElementById("partnerdancerh");
+    alone.onclick = hideExtraForm;
+    partner.onclick = displayExtraForm;
+
+    function firstSelect() {
+        var selectedValue = select1.options[select1.selectedIndex].value;
+        if (selectedValue == "FOLLOWER") {
+            select2.selectedIndex = "1";
+            hidden.value = "LEADER";
+        } else {
+            select2.selectedIndex = "0";
+            hidden.value = "FOLLOWER";
+        }
+    }
+
+    function hideExtraForm() {
+        console.log("Hiding extra form");
+        form.setAttribute("hidden", "true");
+    }
+    function displayExtraForm() {
+        console.log("Displaying extra form");
+        form.removeAttribute("hidden")
+    }
+</script>
+        <br>
+                    </div>
+    </div>
+
+<div id="copyright" class="container">
+    <p>Copyright (c) 2006-2016 Argentine Tango Club. All rights reserved. | Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
+</div>
+</body>
+</html>
