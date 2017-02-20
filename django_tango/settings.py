@@ -36,6 +36,15 @@ else:
     ALLOWED_HOSTS = ["*"]
 
 
+if os.name == "nt":
+    with open("config_windows.json", 'r') as f:
+        config_windows = json.loads(f.read().strip())
+        postgres_user = config_windows["user"]
+        postgres_pass = config_windows["password"]
+else:
+    postgres_user = ""
+    postgres_pass = ""
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -90,6 +99,8 @@ DATABASES = {
         'NAME': database_info["name"],
         'HOST': database_info["host"],
         'PORT': database_info["port"],
+        'USER': postgres_user,
+        'PASSWORD': postgres_pass
     }
 }
 
