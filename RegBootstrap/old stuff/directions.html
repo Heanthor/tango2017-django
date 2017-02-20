@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : WellFormed
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130731
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <title>7th annual Terrapin Tango Festival</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Argentine Tango, University of Maryland, ATC, Terrapin Tango Festival" />
+    <meta name="description" content="Terrapin Tango Festival" />
+    <meta name="author" content="Benjamyn Ward" />
+    <!--*******************************-->
+    <!-- LOAD FACEBOOK SCRIPT -->
+    <meta property="og:title" content="Terrapin Tango Festival" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.studentorg.umd.edu/atc/site/festival/" />
+    <meta property="og:image" content="http://www.studentorg.umd.edu/atc/site/festival/tango/TangoCoupleSmall.jpg" />
+    <meta property="og:site_name" content="Terrapin Tango Festival" />
+    <script type="text/javascript" src="scripts/facebook.js"></script>
+    <!--*******************************-->
+    <!-- LOAD GOOGLE PLUS SCRIPT -->
+    <script type="text/javascript" src="scripts/googlePlus.js"></script>
+    <!--*******************************-->
+    <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link href="stylesheets/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="stylesheets/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="stylesheets/artists-tab-slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="logo" class="container">
+    <h1><a href="#">7th annual <span> Terrapin Tango Festival</span></a></h1>
+    <p>The University of Maryland, College Park, April 15-17, 2016</p>
+</div>
+<div id="menu" class="container">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="vendors_yoga.html">Yoga/Vendors</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li class="current_page_item"><a href="#">Directions</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+</div>
+<div id="page" class="container">
+    <div>
+        <!-- it works the same with all jquery version from 1.3.1 to 2.0.3 -->
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+        <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+        <script type="text/javascript" src="js/jssor.core.js"></script>
+        <script type="text/javascript" src="js/jssor.utils.js"></script>
+        <script type="text/javascript" src="js/jssor.slider.js"></script>
+        <script type="text/javascript" src="js/jssor.player.ytiframe.js"></script>
+        <script>
+
+            jQuery(document).ready(function ($) {
+                var options = {
+                    $AutoPlay: false,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                    $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                    $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                    $PauseOnHover: 0,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 3
+
+                    $ArrowKeyNavigation: true,                           //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                    $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                    $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                    //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                    //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                    $SlideSpacing: 5,                                     //[Optional] Space between each slide in pixels, default value is 0
+                    $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                    $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                    $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, direction navigator container, thumbnail navigator container etc).
+                    $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, default value is 1
+                    $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                    $ThumbnailNavigatorOptions: {
+                        $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                        $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                        $AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+                        $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+                        $SpacingX: 4,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                        $SpacingY: 4,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+                        $DisplayPieces: 6,                              //[Optional] Number of pieces to display, default value is 1
+                        $ParkingPosition: 0,                            //[Optional] The offset position to park thumbnail
+                        $Orientation: 1,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+                        $DisableDrag: false                             //[Optional] Disable drag or not, default value is false
+                    }
+                };
+
+                var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+                //fetch and initialize youtube players
+                $JssorPlayer$.$FetchPlayers(document.body);
+            });
+        </script>
+        <!-- Jssor Slider Begin -->
+        <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
+        <div id="slider1_container" style="position: relative; top: 0px; bottom: 0px; left: 0px; width: 810px;
+            height: 910px; background: rgba(0,0,0,0)" >
+
+            <!-- Loading Screen -->
+            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                    background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+                <div style="position: absolute; display: block; background: url(./images/loading.gif) no-repeat center center;
+                    top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+            </div>
+
+            <!-- Slides Container -->
+            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 50px; width: 1200px; height: 910px; overflow: hidden;">
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">Parking at UMD</p></div>
+                    <p>
+                        We recommend parking in Lot 1 which as been highlighted red in the map below. Stamp has been
+                        highlighted green.
+                    </p>
+                    <br/>
+                    <div style="text-align: center;">
+                        <img src="images/directions/map_campus.jpg" width="80%"/>
+                    </a>
+                    </div>
+                </div>
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">By Car: From I-95</p></div>
+                    <p>
+                        Recommended:
+                        <ol style="list-style: inside decimal; margin-left: 40px;">
+                            <li>Take I-95 South to the Capital Beltway East (I-495)</li>
+                            <li>I-95 South will merge to the left, joining I-495</li>
+                            <li>Take Exit 23 "201 Kenilworth Avenue Bladensburg Greenbelt"</li>
+                            <li>Proceed south on 201 in the direction of "Greenbelt Road and Bladensburg"</li>
+                            <li>At second light, turn right onto Paint Branch Parkway</li>
+                            <li>Proceed approximately two miles to U.S. Route 1</li>
+                            <li>Turn left onto U.S. Route 1</li>
+                            <li>Turn right onto Campus Drive. Go straight through the traffic circle with the big M. Stamp Student Union is on your right.</li>
+                            <li>Lot 1 and Lot Z are at the end of Campus Drive.</li>
+                        </ol>
+                    </p>
+                    <div style="text-align: center;">
+                        <div style="margin-bottom: 20px;">
+                            <a href="https://www.google.com/maps/preview#!data=!1m4!1m3!1d57865!2d-76.9246235!3d39.0178796!4m35!3m26!1m4!3m2!3d39.0617663!4d-76.918916!6e2!1m4!3m2!3d38.9871869!4d-76.9494343!6e2!2e0!3m8!1m3!1d57837!2d-76.9343655!3d39.0512356!3m2!1i1920!2i896!4f13.1!9m5!2m2!3d38.9863745!4d-76.908521!3s0x89b7c1505e881653%3A0x3ccd3cdbf383960a!4f0.5321916!5m2!13m1!1e1!7m4!11m3!1m1!1e1!2b1&fid=0"
+                               target="_blank">
+                                Click to open Google Maps in new tab with route directions.
+                            </a>
+                        </div>
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m31!1m12!1m3!1d24803.543575819676!2d-76.90934563786588!3d39.005208103431514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m16!1i0!3e0!4m3!3m2!1d39.061766299999995!2d-76.918916!4m3!3m2!1d38.9978334!2d-76.89913469999999!4m5!1s0x89b7c690b1e73d4f%3A0x9ae278a39bf379f8!2sUnion+Dr%2C+College+Park%2C+MD+20740!3m2!1d38.9871878!2d-76.94754019999999!5e0!3m2!1sen!2sus!4v1389598187418"
+                                width="1000" height="600" frameborder="0" style="border:0">
+                        </iframe>
+                    </div>
+                </div>
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">BWI Airport</p></div>
+                    <p>
+                        Recommended:
+                        <ol style="list-style: inside decimal; margin-left: 40px;">
+                            <li>Take I-195W toward I-95</li>
+                            <li>Exit onto I-95 South</li>
+                            <li>I-95 S will merge into I-495. Go West</li>
+                            <li>Take Exit 23 "201 Kenilworth Ave"</li>
+                            <li>Travel south on 201</li>
+                            <li>After second light, turn right onto Paint Branch Parkway</li>
+                            <li>Cross Rt 1 and continue onto Campus Drive</li>
+                            <li>Go straight at the round-about with a big "M"</li>
+                            <li>STAMP is at the top of the hill on your right</li>
+                            <li>Lot 1 and Lot Z are at the end of Campus Drive</li>
+                        </ol>
+                    </p>
+                    <div style="text-align: center;">
+                        <div style="margin-bottom: 20px;">
+                            <a href="https://www.google.com/maps/preview#!data=!1m4!1m3!1d231115!2d-76.9420405!3d39.1226313!4m38!3m28!1m5!1sBaltimore%2FWashington+International+Thurgood+Marshall+Airport%2C+7062+Elm+Rd%2C+Baltimore%2C+MD+21240!2s0x89b7e2fcbbc2e00b%3A0x150cfa971740!3m2!3d39.180862!4d-76.667548!1m4!3m2!3d39.1462658!4d-76.843421!6e2!1m4!3m2!3d38.9924664!4d-76.9035883!6e2!1m1!1sUnion+Dr%2C+College+Park%2C+MD+20740!2e0!3m8!1m3!1d28938!2d-76.9048758!3d39.0028724!3m2!1i1920!2i896!4f13.1!5m2!13m1!1e1!7m5!6i2!11m3!1m1!1e1!2b1&fid=0"
+                               target="_blank">
+                                Click to open Google Maps in new tab with route directions.
+                            </a>
+                        </div>
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m37!1m12!1m3!1d198098.56158563096!2d-76.94204049481445!3d39.122631257225734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m22!1i0!3e0!4m5!1s0x89b7e2fcbbc2e00b%3A0x150cfa971740!2sBaltimore%2FWashington+International+Thurgood+Marshall+Airport%2C+7062+Elm+Rd%2C+Baltimore%2C+MD+21240!3m2!1d39.180862!2d-76.667548!4m3!3m2!1d39.146265799999995!2d-76.84342099999999!4m3!3m2!1d38.9924664!2d-76.9035883!4m5!1s0x89b7c690b1e73d4f%3A0x9ae278a39bf379f8!2sUnion+Dr%2C+College+Park%2C+MD+20740!3m2!1d38.9871878!2d-76.94754019999999!5e0!3m2!1sen!2sus!4v1389598344720"
+                                width="1000" height="600" frameborder="0" style="border:0"></iframe>
+                    </div>
+                </div>
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">Reagan Airport</p></div>
+                    <p>
+                        The easiest way to UMD from Reagan is to take the Metro:
+                        <ol style="list-style: inside decimal; margin-left: 40px;">
+                            <li>Yellow Line from Regan towards Fort Totten</li>
+                            <li>Anywhere between L'Enfant Plaza and Fort Totten, switch to the Green Line</li>
+                            <li>Take Green Line towards Greenbelt, exiting at College Park Station</li>
+                            <li>Board the UMD 104 College Park Metro Bus</li>
+                        </ol>
+                        Click image to open larger image in new tab. Times for the 104 bus can be found in the "By Metro/Marc" tab.<br/><br/>
+                        <div style="text-align: center;">
+                            <a href="images/directions/MetroMapSmaller.jpg" _target="_blank">
+                                <img src="images/directions/MetroMapSmaller.jpg" height="600" />
+                            </a>
+                        </div>
+                    </p>
+                </div>
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">Dulles Airport</p></div>
+                    <p>
+                        Recommended:
+                        <ol style="list-style: inside decimal; margin-left: 40px;">
+                            <li>Head east on Saarinen Cir</li>
+                            <li>Take the exit onto VA-267 E</li>
+                            <li>Take exit toward I-495 N </li>
+                            <li>Keep left at the fork and merge onto I-495 North</li>
+                            <li>Take exit 23 for MD-201N (Kenilworth Ave) toward Greenbelt</li>
+                            <li>Turn right onto Kenilworth Ave South</li>
+                            <li>Turn right onto Paint Branch Pkwy</li>
+                            <li>Continue onto Campus Drive at the Rt 1 intersection</li>
+                            <li>At the round-about, continue straight, STAMP is at the top of the hill</li>
+                        </ol>
+                    </p>
+                    <div style="text-align: center;">
+                        <div style="margin-bottom: 20px;">
+                            <a href="https://www.google.com/maps/preview#!data=!1m4!1m3!1d57878!2d-77.0268968!3d39.0019844!4m33!3m23!1m5!1sWashington+Dulles+International+Airport%2C+1+Saarinen+Cir%2C+Sterling%2C+Virginia+20166!2s0x89b64740174eb057%3A0x8e01cb201080601d!3m2!3d38.952642!4d-77.447901!1m4!3m2!3d38.9906444!4d-76.9057468!6e2!1m1!1sUnion+Dr%2C+College+Park%2C+MD+20740!2e0!3m8!1m3!1d14472!2d-76.9229129!3d38.9899772!3m2!1i1920!2i896!4f13.1!5m2!13m1!1e1!7m5!6i1!11m3!1m1!1e1!2b1&fid=0"
+                               target="_blank">
+                                Click to open Google Maps in new tab with route directions.
+                            </a>
+                        </div>
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m33!1m12!1m3!1d49609.34765304465!2d-77.02689677478861!3d39.00198444627856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m18!1i0!3e0!4m5!1s0x89b64740174eb057%3A0x8e01cb201080601d!2sWashington+Dulles+International+Airport%2C+1+Saarinen+Cir%2C+Sterling%2C+Virginia+20166!3m2!1d38.952642!2d-77.447901!4m3!3m2!1d38.9906444!2d-76.9057468!4m5!1s0x89b7c690b1e73d4f%3A0x9ae278a39bf379f8!2sUnion+Dr%2C+College+Park%2C+MD+20740!3m2!1d38.9871878!2d-76.94754019999999!5e0!3m2!1sen!2sus!4v1389598528880"
+                                width="1000" height="600" frameborder="0" style="border:0"></iframe>
+                    </div>
+                </div>
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">By Metro/Marc</p></div>
+                    <p>
+                        The University of Maryland operates a free shuttle from College Park/UMD station on the Green Line. The Camden line of the MARC train also stops at this station.
+                    </p>
+                    <p>
+                        Take the Shuttle-UM 104 College Park Metro Bus
+                        (<a href="http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/104_CPM.pdf" target="_blank">Schedule PDF</a>)
+                        to the Union drive garage. 
+                       Exit left out of the bus and walk to the large traffic circle. Take a right and walk up the hill, the Stamp Student Union will be on your right. This shuttle operates as long as the Metro is running.
+                    </p>
+                    <p>
+                        See <a href="http://www.dots.umd.edu" target="_blank">dots.umd.edu</a> and
+                        <a href="http://www.wmata.com" target="_blank">www.wmata.com</a> for more information on shuttle and
+                        train schedules.
+                    </p>
+                    <p>Click Metro image for an enlarged version in a new tab.</p>
+                        <iframe src="http://www.nextbus.com/customStopSelector/stopSelectorForIFrame.jsp?a=umd&cssFile=http://www.parking.umd.edu/transportation/css/nextbus.css&bookmarkableURL=http://www.parking.umd.edu/transportation/nexbus.html"
+                                width="65%" height="500px" allowtransparency="yes" frameborder="0" scrolling="auto" systran="no"
+                                style="float: left; background-color:transparent;"></iframe>
+                        <a href="images/directions/MetroMapSmaller.jpg" target="_blank">
+                            <img style="float: right;" src="images/directions/MetroMapSmaller.jpg" width="30%" />
+                        </a>
+                </div>
+            </div>
+
+            <!-- ThumbnailNavigator Skin Begin -->
+            <div u="thumbnavigator" class="jssort14" style="position: absolute; width: 1000px; height: 47px; left: 100px; top: -27px; background: rgba(0,0,0,0);">
+                <div u="slides" style="cursor: move; top:0px; left:0px;">
+                    <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 180px; HEIGHT: 40px; TOP: 0; LEFT: 0; padding:0px; background:#fff;">
+                        <div class=w><ThumbnailTemplate class="c" style="WIDTH: 100%; HEIGHT: 35px; position:absolute; TOP: 0; LEFT: 0; line-height:23px; text-align:center;"></ThumbnailTemplate></div>
+                    </div>
+                </div>
+            </div>
+            <!-- ThumbnailNavigator Skin End -->
+        </div>
+    </div>
+</div>
+<div id="copyright" class="container">
+    <p>Copyright (c) 2006-2015 Argentine Tango Club. All rights reserved. | Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
+</div>
+</body>
+</html>

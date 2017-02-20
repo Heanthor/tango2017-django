@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : WellFormed
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130731
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <title>7th annual Terrapin Tango Festival</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Argentine Tango, University of Maryland, ATC, Terrapin Tango Festival" />
+    <meta name="description" content="Terrapin Tango Festival" />
+    <meta name="author" content="Benjamyn Ward" />
+    <!--*******************************-->
+    <!-- LOAD FACEBOOK SCRIPT -->
+    <meta property="og:title" content="Terrapin Tango Festival" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.studentorg.umd.edu/atc/site/festival/" />
+    <meta property="og:image" content="http://www.studentorg.umd.edu/atc/site/festival/tango/TangoCoupleSmall.jpg" />
+    <meta property="og:site_name" content="Terrapin Tango Festival" />
+    <script type="text/javascript" src="scripts/facebook.js"></script>
+    <!--*******************************-->
+    <!-- LOAD GOOGLE PLUS SCRIPT -->
+    <script type="text/javascript" src="scripts/googlePlus.js"></script>
+    <!--*******************************-->
+    <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link href="stylesheets/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="stylesheets/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="stylesheets/food-list-slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="logo" class="container">
+    <h1><a href="#">7th annual <span>Terrapin Tango Festival</span></a></h1>
+    <p>The University of Maryland, College Park, April 15-17, 2016</p>
+</div>
+<div id="menu" class="container">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="vendors_yoga.html">Yoga/Vendors</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li class="current_page_item"><a href="#">Food</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="directions.html">Directions</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+</div>
+<div id="page" class="container">
+    <center><h3>* = within walking distance of campus center</h3><br/><br/></center>
+    <div>
+        <!-- it works the same with all jquery version from 1.3.1 to 2.0.3 -->
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+        <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+        <script type="text/javascript" src="js/jssor.core.js"></script>
+        <script type="text/javascript" src="js/jssor.utils.js"></script>
+        <script type="text/javascript" src="js/jssor.slider.js"></script>
+    </div>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var options = {
+                $AutoPlay: false,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 0,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 3
+
+                $ArrowKeyNavigation: true,                           //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                $SlideSpacing: 5,                                     //[Optional] Space between each slide in pixels, default value is 0
+                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, direction navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 2,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, default value is 1
+                $DragOrientation: 2,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                    $AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+                    $SpacingX: 4,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                    $SpacingY: 4,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+                    $DisplayPieces: 7,                              //[Optional] Number of pieces to display, default value is 1
+                    $ParkingPosition: 0,                            //[Optional] The offset position to park thumbnail
+                    $Orientation: 2,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+                    $DisableDrag: false                             //[Optional] Disable drag or not, default value is false
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+        });
+    </script>
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
+    <div id="slider1_container" style="position: relative; margin: auto; width: 1150px; height: 535px; border: black 1px solid; background: rgba(0,0,0,0);">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 400px; top: 20px; width: 600px; height: 460px;
+            overflow: hidden;">
+         <div>
+                <div u="thumb">
+                    <img class="i" src="images/food/favorites.jpg" />
+                    <div class="t">Club Favorite</div>
+                </div>
+                <ul class="style1">
+                    <li class="first">
+                        <a target="_blank" href="http://eatfishnet.com">Fishnet</a>:
+                        5010 Berwyn RD. College Park, MD 20740
+                        <br>
+                        <br>
+                        A small fish sandwich restraunt tucked on a side streat off of Rt.1 in College Park. Small, relaxed atmosphere, and fresh seafood. One of the best restaurants in College Park, hands down.
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div u="thumb">
+                    <img class="i" src="images/food/american-flag.jpg" />
+                    <div class="t">American</div>
+                </div>
+                <ul class="style1">
+                    <li class="first">
+                        <a target="_blank" href="http://thestamp.umd.edu/food/md_food_co-op">Maryland Food Collective</a>:
+                        Stamp Student Union basement; cheap, healthy, veg-friendly food.  Closes at 6 pm
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/applebees/">Applebee's</a>:
+                        7272 Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/buffalo-wild-wings-grill-bar/">Buffalo Wild Wings Grill &amp; Bar</a>:
+                        10240 Baltimore Ave
+                    </li>
+                    <li>
+                        Chick-fil-A: Inside the Stamp Student Union
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/cluck-u-chicken/">Cluckster’s</a>:
+                        7415 Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/college-park-diner/">College Park Diner</a>:
+                        9206 Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/hard-times-cafe/">Hard Times Cafe</a>:
+                        4738 Cherry Hill Rd
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/platos-diner/">Plato’s Diner</a>:
+                        7150 Baltimore Ave
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/rj-bentleys-filling-station/">RJ Bentley’s Filling Station</a>:
+                        7323 Baltimore Ave
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div u="thumb">
+                    <img class="i" src="images/food/latin.jpg" />
+                    <div class="t">Latin</div>
+                </div>
+                <ul class="style1">
+                    <li class="first">
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/chipotle-mexican-grill/">Chipotle Mexican Grill</a>:
+                        7332 Baltimore Ave
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/krazi-kebob/">Krazi Kebob</a>:
+                        4427 Lehigh Rd
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/pupuseria-la-familiar/">Pupuseria La Familiar</a>:
+                        8145-K Baltimore Ave
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div u="thumb" >
+                    <img class="i" src="images/food/pizza.jpg" />
+                    <div class="t">Italian &amp; Pizza</div>
+                </div>
+                <ul class="style1">
+                    <li class="first">
+                        *<a target="_blank" href="http://pizza.dominos.com/maryland/college-park/20740/7312-baltimore-ave/">Dominos</a>:
+                        7312 Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/d-p-dough/">D.P. Dough</a>:
+                        8145-J Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/mamma-lucia-italian-restaurant/">Mamma Lucia Italian
+                            Restaurant</a>:
+                        4734 Cherry Hill Rd
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/papa-johns-pizza/">Papa John’s Pizza</a>:
+                        4509 College Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/pizza-autentica-now-open/">Pizza Autentica</a>:
+                        8300 Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/pizza-hut/">Pizza Hut</a>:
+                        9015 Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/pizza-roma/">Pizza Roma</a>:
+                        9805 Rhode Island Ave
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/ratsies-terrapin-eatery/">Ratsie’s Terrapin
+                        Eatery</a>:
+                        7400 Baltimore Ave
+                    </li>
+                    <li>
+                        *Sbarro Pizza and Pasta: Inside the Stamp Student Union
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div u="thumb">
+                    <img class="i" src="images/food/cafe.jpg" />
+                    <div class="t">Cafe &amp; Breakfast</div>
+                </div>
+                <ul class="style1">
+                    <li class="first">
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/bagel-place/">Bagel Place</a>:
+                        7423 Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/dunkin-donuts-2/">Dunkin Donuts</a>:
+                        10260 Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/ihop/">IHOP</a>:
+                        9680 Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/starbucks-coffee/">Starbucks Coffee</a>:
+                        7336 Baltimore Ave
+                    </li>
+                    <li>
+                        *The Coffee Bar: Inside the Stamp Student Union
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div u="thumb">
+                    <img class="i" src="images/food/ramen.jpg" />
+                    <div class="t">Asian, Middle Eastern, &amp; Indian</div>
+                </div>
+                <ul class="style1">
+                    <li class="first">
+                        <a target="_blank" href="http://shopcollegepark.org/shops/hanami-japanese-restaurant/">Hanami Japanese
+                            Restaurant</a>: 8145-M Baltimore Ave
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/kiyoko-express/">Kiyoko Express</a>:
+                        7313-H Baltimore Ave
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/panda-restaurant/">Panda Chinese Restaurant</a>:
+                        4439 Lehigh Rd
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/pho-dlite-now-open/">Pho D’Lite</a>:
+                        8147-A Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/seven-seas-restaurant/">Seven Seas Restaurant</a>:
+                        8503 Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/shang-hai-cafe/">ShangHai Cafe</a>:
+                        7409 Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/shen-yang-chinese-restaurant/">Shen Yang Chinese
+                            Restaurant</a>:
+                        9905 Rhode Island Ave
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/ten-rens-tea-time/">Ten Ren’s Tea Time</a>:
+                        7418 Baltimore Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/wasabi-bistro/">Wasabi Bistro</a>:
+                        4505 College Ave
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/yums-express/">Yum’s Express</a>:
+                        4746 Cherry Hill Rd
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div u="thumb">
+                    <img class="i" src="images/food/burger.JPG" />
+                    <div class="t">Burgers &amp; Sandwiches</div>
+                </div>
+                <ul class="style1">
+                    <li class="first">
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/five-guys/">Five Guys</a>:
+                        7417 Baltimore Ave
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/jasons-deli-2/">Jason’s Deli</a>:
+                        7356 Baltimore Ave
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/jimmy-johns/">Jimmy John’s</a>:
+                        7410 Baltimore Ave
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/looneys-pub/">Looney’s Pub</a>:
+                        8150 Baltimore Ave
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/marathon-deli/">Marathon Deli</a>:
+                        4429 Lehigh Rd
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://shopcollegepark.org/shops/new-york-deli/">New York Deli</a>:
+                        4926 Edgewood Ave
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/potbelly-sandwich-works/">Potbelly Sandwich Shop</a>:
+                        7422 Baltimore Ave
+                    </li>
+                    <li>
+                        *<a target="_blank" href="http://shopcollegepark.org/shops/subway-2/">Subway</a>:
+                        Inside the Stamp Student Union
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ThumbnailNavigator Skin Begin -->
+        <div u="thumbnavigator" class="jssort11" style="position: absolute; width: 1px; height: 300px; left: 160px; top:115px;">
+            <!-- Thumbnail Item Skin Begin -->
+            <div u="slides" style="cursor: move;">
+                <div u="prototype" class="p" style="position: absolute; width: 300px; height: 69px; top: 0; left: 0;">
+                    <thumbnailtemplate style=" width: 100%; height: 100%; border: none;position:absolute; top: 0; left: 0;"></thumbnailtemplate>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+    </div>
+</div>
+<div id="copyright" class="container">
+    <p>Copyright (c) 2006-2015 Argentine Tango Club. All rights reserved. | Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
+</div>
+</body>
+</html>

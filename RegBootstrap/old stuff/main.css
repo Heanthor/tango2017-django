@@ -1,0 +1,108 @@
+[role="scheduleform"] {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1350px;
+    width: 100%;
+    background-color: #ffffff;
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+}
+
+[role="formouter"] [role="divider"] {
+    margin-bottom: 2.5vh;
+}
+
+.statustext {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+table {
+    text-align: center;
+    width: 800px;
+}
+/* Milongas */
+h2 {
+    margin: 0;
+    color: #fa85d1;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+h3 {
+    font-size: 1em;
+    font-weight: 400;
+    padding: 3px
+}
+
+[role="formbg"] {
+    width: 80%;
+    max-width: 800px;
+    height: 100vh;
+    opacity: 0.1;
+    margin-left: calc(55% - 430px);
+    background-repeat: no-repeat;
+}
+
+[role="aqua"] {
+    background-color:#22cbc4;
+    opacity: 1;
+}
+
+[role="alice"] {
+    background-color: #6cd0e2;
+    opacity: 1;
+}
+
+
+[role="tableshell"] {
+    position: absolute;
+    margin-top: -100vh;
+    margin-left: calc(25% - 150px)
+}
+
+[role="yoga"] {
+    font-size: 1.7em;
+    padding: 5px 0;
+    background-color: #fa85d1
+}
+table.center {
+    margin: 0 auto;
+}
+
+table { border: 1px solid #000; border-collapse: collapse; }
+td { border-top: 1px solid #000; border-left: 1px solid #000; border-bottom: 1px solid #000; border-right: 1px solid #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;}
+
+td.selected { outline: 3px solid #ffcc00;}
+
+.location {
+    font-size: 1.8em;
+}
+
+/*.closed {
+    background-color: gray;
+}*/
+
+/*.shadow-box {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}*/
+
+@media(max-width: 800px) {
+    [role="formbg"] {
+        margin-left: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : WellFormed
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130731
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <title>7th annual Terrapin Tango Festival</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Argentine Tango, University of Maryland, ATC, Terrapin Tango Festival" />
+    <meta name="description" content="Terrapin Tango Festival" />
+    <meta name="author" content="Benjamyn Ward" />
+    <!--*******************************-->
+    <!-- LOAD FACEBOOK SCRIPT -->
+    <meta property="og:title" content="Terrapin Tango Festival" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.studentorg.umd.edu/atc/site/festival/" />
+    <meta property="og:image" content="http://www.studentorg.umd.edu/atc/site/festival/tango/TangoCoupleSmall.jpg" />
+    <meta property="og:site_name" content="Terrapin Tango Festival" />
+    <script type="text/javascript" src="scripts/facebook.js"></script>
+    <!--*******************************-->
+    <!-- LOAD GOOGLE PLUS SCRIPT -->
+    <script type="text/javascript" src="scripts/googlePlus.js"></script>
+    <!--*******************************-->
+    <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+    <link href="stylesheets/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="stylesheets/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="stylesheets/artists-tab-slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="logo" class="container">
+    <h1><a href="#">7th annual <span>Terrapin Tango Festival</span></a></h1>
+    <p>The University of Maryland, College Park, April 15-17, 2016</p>
+</div>
+<div id="menu" class="container">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="current_page_item"><a href="#">Artists</a></li>
+        <li><a href="vendors_yoga.html">Yoga/Vendors</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="directions.html">Directions</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+</div>
+<div id="page" class="container">
+    <div>
+        <!-- it works the same with all jquery version from 1.3.1 to 2.0.3 -->
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+        <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+        <script type="text/javascript" src="js/jssor.core.js"></script>
+        <script type="text/javascript" src="js/jssor.utils.js"></script>
+        <script type="text/javascript" src="js/jssor.slider.js"></script>
+        <script type="text/javascript" src="js/jssor.player.ytiframe.js"></script>
+        <script>
+
+            jQuery(document).ready(function ($) {
+                var options = {
+                    $AutoPlay: false,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                    $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                    $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                    $PauseOnHover: 0,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 3
+
+                    $ArrowKeyNavigation: true,                           //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                    $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                    $MinDragOffsetToSlide: 150,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                    //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                    //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                    $SlideSpacing: 5,                                     //[Optional] Space between each slide in pixels, default value is 0
+                    $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                    $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                    $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, direction navigator container, thumbnail navigator container etc).
+                    $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, default value is 1
+                    $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                    $ThumbnailNavigatorOptions: {
+                        $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                        $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                        $AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+                        $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+                        $SpacingX: 4,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                        $SpacingY: 4,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+                        $DisplayPieces: 6,                              //[Optional] Number of pieces to display, default value is 1
+                        $ParkingPosition: 0,                            //[Optional] The offset position to park thumbnail
+                        $Orientation: 1,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+                        $DisableDrag: false                             //[Optional] Disable drag or not, default value is false
+                    }
+                };
+
+                var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+                //fetch and initialize youtube players
+                $JssorPlayer$.$FetchPlayers(document.body);
+            });
+        </script>
+        <!-- Jssor Slider Begin -->
+        <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
+        <div id="slider1_container" style="position: relative; top: 0px; bottom: 0px; left: 0px; width: 820px;
+            height: 850px; background: rgba(0,0,0,0)" >
+
+            <!-- Loading Screen -->
+            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                    background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+                <div style="position: absolute; display: block; background: url(./images/loading.gif) no-repeat center center;
+                    top: 0px; left: 0px;width: 100%;height:100%;">
+                </div>
+            </div>
+
+            <!-- Slides Container -->
+            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 30px; width: 1200px; height: 850px; overflow: hidden;">
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">Daniela &amp; Luis</p></div>
+
+                    <img class="slide-image image-margin" src="./images/artists/daniella_and_luis_16.jpg" height="400" width=""/>
+                    <p>
+                        <br>
+                       Daniela and Luis met in 2005, during her first trip to Buenos Aires. What was supposed to be Luis's last tanda for the night turned into two hours of dancing together. The magical connection they experienced that night led them to join their paths. Daniela left her career as an MIT engineering professor to become Luis’s tango partner. Luis left Buenos Aires to join her in New York City. 
+                    </p>
+                    <p>
+                   Since the beginning of their professional partnership in 2006, Daniela and Luis have established themselves as popular dancers and instructors, as evidenced by their curriculum spanning festivals, workshops and performances in more than 80 cities across four continents.
+                    </p>
+                    <p>
+As performers, Daniela and Luis' found their home in the spontaneity and profound focus of improvisation. Their goal: to feel and to make feel; to lose themselves in a four-way communication with each other, the music and the audience. To that end they greedily avail themselves of techniques and tools across all tango styles, never losing sight that these are only a means and never an end. The result is a charismatic dance that is infused with joy, sincerity heartfulness, and occasional touches of comedy.	
+                    
+                        </p>
+                    <p>
+                        They have developed a teaching methodology that leverages Daniela’s engineering, mathematics and classical piano and Luis’s massage therapy backgrounds, prioritizing proper body mechanics, improvisation skills and deep musical understanding over complex sequences of steps. Their ultimate goal is to help students dance with ease and confidence, create a pleasurable experience for their partners and find their own unique tango voice. One such effort to promote these goals is their <a href="http://www.danielayluis.com/#%21immersion-seminar-/c1sj6"> “Buenos Aires Immersion Seminar”</a>, a 20-hour training program with zero complex sequences, focusing on technique, body awareness, connection, musicality and floorcraft, which is offered yearly in Buenos Aires and abroad since 2011.
+                    </p>
+                     <div u="player" style="float: right; position: relative; top: 0px; left: 30px; width: 640px; height: 390px; overflow: hidden;">
+                        <iframe pHandler="ytiframe" pHideControls="0" width="640" height="390" style="z-index: 0;" url="//www.youtube.com/embed/SHKxXS5j-MY?list=PLB3D39DD09214F25B" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                    <p>
+Besides their participation in numerous tango events around the world, other accomplishments include choreographing world championship winning performances, starting The Tango Zone Dance Company alongside Ana Padron and Diego Blanco, and the multimedia 90 miute double feature "Man vs Time" and Dreamonia".
+                    </p>
+                </div>
+                
+ <div>
+                    <div u="thumb"><p style="vertical-align: middle;">Juan &amp; Sol</p></div>
+                    <img class="slide-image image-margin" src="./images/artists/juan_sol_photo.jpg" />
+                    <p>
+                        Bio being translated!
+                    </p>
+                        <br>
+                    <p> Coming Soon!</p>
+
+                </div>
+            
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">Dasha Khripkova</p></div>
+                    <img class="slide-image image-margin" src="images/djs/dasha.jpg" height="250" width=""/>
+                    <p>
+                        <br>
+                       	Dasha started dancing tango in Philadelphia in 2006. It was love from first sight, and it is still going strong. To her, nothing compares to tango in its simplicity and depth of emotions.
+                    </p>
+                    <p>
+	Within a year, Dasha had recognized a need for DJs in her local community and began learning all about tango music from DJs and dancers. Since then, she DJ'd milongas and festivals in many US cities and Buenos Aires. Currently, she is mostly DJing in the Washington D.C. area, enjoying her local community, and serving happiness one tango at the time.
+                    </p>
+                    <p>
+	In our humble opinion, Dasha is awesome.
+                    </p>
+                </div>
+                
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">Xavier Vanier</p></div>
+                    <img class="slide-image image-margin" src="images/djs/xavier_photo.jpg" height="250"/>
+                    <p>
+                        <br>
+                      Xavier has an extensive background in music and martial arts that spans overtwo decades. This experience has granted him a facility both in his understanding of the music as well as in his movements. He began his tango studies with the widely respected Marika Landry, where his ease with the dance became immediately apparent. He began teaching at Tango Fabrika in Montreal and and soon became well known throughout North America.
+                    </p>
+                    <p>
+Xavier continues to be passionate about teaching, dancing, and learning. Having spent several months in Buenos Aires studying with Gaston and Moira, he is more inspired than ever and is in high demand at events around the country.
+                    </p>
+                </div>
+                
+                <div>
+                    <div u="thumb"><p style="vertical-align: middle;">Geoffrey Reiff</p></div>
+                    <img class="slide-image image-margin" src="images/djs/Geoffry_1.jpg" height="250"/>
+                    <p>
+                        <br>
+    Geoffrey fell in love with tango music in 2009 after being introduced to it by a friend, and learning to dance at the University of Minnesota Argentine Tango Club. He quickly became part of the club leadership and began to DJ practicas and milongas on a regular basis. Singing with a tango band in Minneapolis further deepened and matured his appreciation of this rich musical genre. He has since been invited to DJ a variety of regional festivals and events across the United States. At every milonga his aim is to select music that keeps dancers returning to the floor tanda after tanda.</p>
+                </div>
+            </div>
+
+            <!-- ThumbnailNavigator Skin Begin -->
+            <div u="thumbnavigator" class="jssort14" style="position: absolute; width: 1000px; height: 47px; left:100px; top: -27px; background: rgba(0,0,0,0);">
+                <div u="slides" style="cursor: move; top:0px; left:0px;">
+                    <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 195px; HEIGHT: 40px; TOP: 0; LEFT: 0; padding:0px; background:#fff;">
+                        <div class=w><ThumbnailTemplate class="c" style="WIDTH: 100%; HEIGHT: 35px; position:absolute; TOP: 0; LEFT: 0; line-height:23px; text-align:center;"></ThumbnailTemplate></div>
+                    </div>
+                </div>
+            </div>
+            <!-- ThumbnailNavigator Skin End -->
+        </div>
+    </div>
+</div>
+<div id="copyright" class="container">
+    <p>Copyright (c) 2006-2015 Argentine Tango Club. All rights reserved. | Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
+</div>
+</body>
+</html>
